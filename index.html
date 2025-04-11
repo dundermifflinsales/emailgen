@@ -18,7 +18,7 @@
     <div class="container" id="container">
       <div class="email-box">
         <h2>Your Mail</h2>
-        <textarea placeholder="Paste the email here..."></textarea>
+        <textarea placeholder="Paste the email here..." id="email"></textarea>
         <p>Select Tone</p>
         <select id="toneSelect">
           <option value="friendly">Friendly</option>
@@ -27,13 +27,13 @@
           <option value="formal">Formal</option>
         </select>
         <div class="controls">
-          <button id="generateBtn">Generate Reply</button>
+          <button id="generateBtn" onclick="start()">Generate Reply</button>
         </div>
       </div>
   
       <div class="reply-box" id="replyBox">
         <h2>Generated Reply</h2>
-        <textarea readonly id="reply">Thank you for reaching out! I will get back to you shortly.</textarea>
+        <textarea readonly id="reply"></textarea>
         <div class="controls">
           <button id="backBtn">← Back</button>
         </div>
