@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email Reply Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="toggleDark">🌙</button>
+  </div>
+  <div class="main">
+    <div class="header">
+      <p class="title">Smart Email Reply Generator</p>
+      <p>Generate quick replies to your emails with ease!</p>
+    </div>
+    <div class="container" id="container">
+      <div class="email-box">
+        <h2>Your Mail</h2>
+        <textarea placeholder="Paste the email here..."></textarea>
+        <p>Select Tone</p>
+        <select id="toneSelect">
+          <option value="friendly">Friendly</option>
+          <option value="professional">Professional</option>
+          <option value="casual">Casual</option>
+          <option value="formal">Formal</option>
+        </select>
+        <div class="controls">
+          <button id="generateBtn">Generate Reply</button>
+        </div>
+      </div>
+  
+      <div class="reply-box" id="replyBox">
+        <h2>Generated Reply</h2>
+        <textarea readonly>Thank you for reaching out! I will get back to you shortly.</textarea>
+        <div class="controls">
+          <button id="backBtn">← Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="proj.js"></script>
+</body>
+</html>
