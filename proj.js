@@ -21,3 +21,30 @@ toggleDark.addEventListener('click', () => {
     toggleDark.textContent = '🌙';
   }
 });
+
+const url="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyATnSGBk5mGP3uPezQjmXphNbKcFADq9d8"
+async function start()
+   {
+    const prompt="hello"
+    const requestBody= {
+        contents: [
+          {
+            parts: [
+              {
+                text: prompt 
+              }
+            ]
+          }
+        ]
+      };
+      
+    const response= await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody)
+    });
+
+    const data=await response.json();
+    const para=document.querySelector("#reply");
+    reply.textContent=data.candidates[0].content.parts[0].text;
+   }

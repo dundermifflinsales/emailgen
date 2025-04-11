@@ -166,3 +166,56 @@ body.dark button {
 body.dark button:hover {
   background-color: #574fd6;
 }
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container.two-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-box,
+  .reply-box {
+    max-width: 100%;
+    width: 100%;
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  #toneSelect {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .header p {
+    text-align: center;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+  }
+}
